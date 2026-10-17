@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+
+<!-- ============================================================= -->
+<!--  PROPUESTA WEB · KONIK → ÓPTICAS CALIFORNIA                    -->
+<!--  Pieza 1: Pulpos Pro · Pieza 2: Landing de citas · Pieza 3: Meta Ads -->
+<!--  Cotizador CONFIGURABLE: precios en "✏️ PRECIO" (bloque JS)     -->
+<!-- ============================================================= -->
+
+<title>Propuesta para Ópticas California · Konik</title>
+<meta name="description" content="Propuesta de Konik para Ópticas California: Pulpos Pro con vendedor virtual para WhatsApp, una página para agendar citas en línea y anuncios en Meta que llenan la agenda.">
+
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --brand:#1392D1;--brand-600:#0E76AB;--brand-300:#74C2EC;
+  --ink:#0C1622;--ink-2:#48566A;--bg:#F4F7FA;--surface:#FFFFFF;
+  --alert:#B42318;--ok:#15803D;--amber:#A16207;
+  --font-display:"Chakra Petch",sans-serif;--font-body:"Hanken Grotesque",sans-serif;
+  --line:rgba(12,22,34,.10);--line-2:rgba(12,22,34,.06);
+  --shadow:0 1px 2px rgba(12,22,34,.04),0 12px 40px -12px rgba(12,22,34,.14);--radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);
+  background-size:64px 64px;background-position:center top;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+a{color:inherit;text-decoration:none;}
+svg.i{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.eyebrow{font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brand-600);display:inline-flex;align-items:center;gap:9px;}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--brand);}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.06;letter-spacing:-.01em;}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:600;font-size:15px;padding:13px 22px;border-radius:10px;transition:transform .18s ease,box-shadow .25s ease,background .2s ease;cursor:pointer;border:1px solid transparent;}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 26px -10px rgba(19,146,209,.7);}
+.btn-primary:hover{background:var(--brand-600);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-600);transform:translateY(-2px);}
+.btn svg{width:16px;height:16px;}
+
+header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(10px);background:rgba(244,247,250,.78);border-bottom:1px solid var(--line);}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{height:63px;width:auto;display:block;}
+.logo-footer{height:50px;width:auto;filter:brightness(0) invert(1);}
+.bar .right{display:flex;align-items:center;gap:18px;}
+.tagfor{font-family:var(--font-display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);}
+
+/* hero */
+.hero{position:relative;padding:92px 0 80px;overflow:hidden;}
+.hero .wrap{position:relative;}
+.hero .glow{position:absolute;right:-160px;top:-120px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(19,146,209,.20),transparent 62%);pointer-events:none;z-index:0;}
+.ring{position:absolute;right:-70px;top:40px;width:440px;height:440px;z-index:0;opacity:.5;animation:spin 60s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.hero-inner{position:relative;z-index:1;max-width:800px;}
+h1{font-size:clamp(38px,6.2vw,66px);margin:18px 0 0;font-weight:700;letter-spacing:-.02em;}
+h1 .hl{position:relative;color:var(--brand-600);}
+h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--brand-300);opacity:.55;z-index:-1;border-radius:3px;}
+.lede{font-size:clamp(16px,2vw,19px);color:var(--ink-2);margin-top:22px;max-width:62ch;}
+.cta-row{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+.facts{display:flex;gap:36px;margin-top:48px;flex-wrap:wrap;}
+.fact .n{font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--ink);}
+.fact .l{font-size:13px;color:var(--ink-2);margin-top:2px;max-width:24ch;}
+/* tabla de agudeza visual (decoración) */
+.chart{position:absolute;right:28px;top:6px;width:210px;text-align:center;font-family:var(--font-display);font-weight:700;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px 16px 16px;box-shadow:var(--shadow);z-index:1;}
+.chart .r{display:block;line-height:1.15;letter-spacing:.22em;margin-right:-.22em;}
+.chart .r1{font-size:58px;}.chart .r2{font-size:42px;}.chart .r3{font-size:30px;color:rgba(12,22,34,.9);}
+.chart .r4{font-size:21px;color:rgba(12,22,34,.72);}.chart .r5{font-size:15px;color:rgba(12,22,34,.5);}.chart .r6{font-size:11px;color:rgba(12,22,34,.32);}
+.chart .cap{display:block;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.16em;color:var(--brand-600);text-transform:uppercase;font-weight:600;}
+
+section.block{padding:84px 0;}
+.sec-head{max-width:680px;margin-bottom:44px;}
+.sec-head h2{font-size:clamp(28px,3.6vw,40px);margin-top:14px;}
+.sec-head p{color:var(--ink-2);margin-top:14px;font-size:16px;}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.cards.four{grid-template-columns:repeat(4,1fr);}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;}
+.card:hover{transform:translateY(-6px);border-color:var(--brand-300);box-shadow:var(--shadow);}
+.card .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(19,146,209,.10);color:var(--brand-600);margin-bottom:18px;}
+.card .ico svg{width:23px;height:23px;}
+.card h3{font-size:18px;}
+.card p{color:var(--ink-2);font-size:14.5px;margin-top:9px;}
+.card.mini{padding:24px 22px;}
+.card.mini p{font-size:13.5px;}
+
+/* números */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:20px;}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;}
+.stat .n{font-family:var(--font-display);font-weight:700;font-size:clamp(26px,3vw,34px);letter-spacing:-.02em;line-height:1.1;}
+.stat .l{font-size:12.5px;color:var(--ink-2);margin-top:7px;}
+.stat.warn{border-color:rgba(180,35,24,.24);background:rgba(180,35,24,.035);}
+.stat.warn .n{color:var(--alert);}
+
+/* mapa de herramientas: estado */
+.tool-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;gap:10px;}
+.tool-top .ico{margin-bottom:0;}
+.status{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px;white-space:nowrap;}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+.status.ok{color:var(--ok);background:rgba(22,163,74,.12);}
+.status.mid{color:var(--amber);background:rgba(202,138,4,.14);}
+.status.bad{color:var(--alert);background:rgba(180,35,24,.10);}
+
+/* banda oscura */
+.dark{background:var(--ink);color:#EAF1F7;border-radius:24px;padding:54px 48px;position:relative;overflow:hidden;}
+.dark .glow{position:absolute;left:-120px;bottom:-160px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(19,146,209,.28),transparent 62%);}
+.dark .eyebrow{color:var(--brand-300);}
+.dark h2{color:#fff;font-size:clamp(26px,3.4vw,38px);margin:14px 0 30px;position:relative;z-index:1;max-width:28ch;}
+.opp{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:34px;}
+.opp .lead{font-family:var(--font-display);font-weight:600;font-size:18px;color:#fff;}
+.opp .txt{color:#9FB2C2;font-size:14px;margin-top:7px;}
+
+/* antes y después */
+.swap{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;}
+.swap-head,.swap-row{display:grid;grid-template-columns:1fr 28px 1.2fr;gap:14px;align-items:center;}
+.swap-head{padding:0 18px;font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7E93A6;margin-bottom:2px;}
+.swap-head span:last-child{color:var(--brand-300);}
+.swap-row{padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.swap-row .was{display:flex;gap:10px;align-items:center;font-size:14px;color:#9FB2C2;}
+.swap-row .now{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:14px;color:#EAF1F7;}
+.swap-row .x{flex:none;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;background:rgba(180,35,24,.20);color:#F2A79E;}
+.swap-row .arr{color:var(--brand-300);display:grid;place-items:center;}
+.swap-row .arr svg{width:18px;height:18px;}
+.pill{font-family:var(--font-display);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#EAF6FF;background:rgba(19,146,209,.35);padding:4px 10px;border-radius:999px;white-space:nowrap;}
+
+/* piezas numeradas */
+.fase-num{width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:13px;display:grid;place-items:center;margin-bottom:14px;}
+.phase-badge{display:inline-flex;font-family:var(--font-display);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-600);background:rgba(19,146,209,.10);padding:5px 11px;border-radius:999px;margin-bottom:14px;}
+.phase-time{font-size:12.5px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px solid var(--line);}
+
+/* diagrama de flujo */
+.flow{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:34px 30px;box-shadow:var(--shadow);}
+.flow-track{display:flex;align-items:flex-start;gap:0;}
+.flow-node{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px;padding:0 8px;}
+.flow-node .flow-ico{width:50px;height:50px;border-radius:14px;background:rgba(19,146,209,.10);color:var(--brand-600);display:grid;place-items:center;flex:none;}
+.flow-node .flow-ico svg{width:23px;height:23px;}
+.flow-node.featured .flow-ico{background:var(--brand);color:#fff;box-shadow:0 10px 22px -10px rgba(19,146,209,.75);}
+.flow-label{font-family:var(--font-display);font-weight:600;font-size:14px;line-height:1.25;}
+.flow-sub{font-size:12px;color:var(--ink-2);line-height:1.35;}
+.flow-arrow{flex:none;display:flex;align-items:center;color:var(--brand-300);padding-top:15px;}
+.flow-arrow svg{width:20px;height:20px;}
+.flow-loops{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:9px;}
+.flow-loop{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-2);}
+.flow-loop .dot{width:7px;height:7px;border-radius:50%;background:var(--brand-300);flex:none;}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;}
+.chip{display:inline-flex;align-items:center;font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.02em;color:var(--ink);background:var(--surface);border:1px solid var(--line);padding:8px 14px;border-radius:999px;}
+
+/* nota bajo una sección */
+.trial-box{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between;}
+.trial-box .th{font-family:var(--font-display);font-weight:600;font-size:17px;}
+.trial-box .tp{color:var(--ink-2);font-size:13.5px;margin-top:6px;max-width:54ch;}
+.small-note{color:var(--ink-2);font-size:13px;margin-top:18px;max-width:76ch;}
+
+/* vendedor virtual */
+.vend{padding:48px 44px;margin-bottom:34px;}
+.vend-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start;}
+.vend h2{margin:14px 0 14px;max-width:20ch;}
+.vend-lead{color:#9FB2C2;font-size:15px;max-width:48ch;margin-bottom:26px;}
+.vend-list{list-style:none;display:flex;flex-direction:column;gap:18px;}
+.vend-list li{display:flex;gap:14px;align-items:flex-start;}
+.vend-list .vi{flex:none;width:38px;height:38px;border-radius:11px;background:rgba(19,146,209,.22);color:var(--brand-300);display:grid;place-items:center;}
+.vend-list .vi svg{width:19px;height:19px;}
+.vend-list b{display:block;font-family:var(--font-display);font-weight:600;font-size:15px;color:#fff;}
+.vend-list .d{display:block;font-size:13.5px;color:#9FB2C2;margin-top:2px;line-height:1.5;}
+.chat{background:var(--surface);color:var(--ink);border-radius:24px;padding:18px 16px 16px;max-width:340px;width:100%;margin:0 auto;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);}
+.chat-top{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--line);}
+.chat-av{width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-family:var(--font-display);font-weight:700;font-size:12px;flex:none;}
+.chat-top b{display:block;font-family:var(--font-display);font-size:14px;line-height:1.2;}
+.chat-top small{display:block;font-size:11.5px;color:var(--ok);}
+.chat-top .ph-tag{margin-left:auto;}
+.chat-time{text-align:center;font-size:11px;color:var(--ink-2);margin:14px 0 10px;}
+.bub{max-width:84%;padding:10px 13px;border-radius:14px;font-size:13px;line-height:1.45;margin-bottom:8px;}
+.bub.me{margin-left:auto;background:rgba(19,146,209,.12);border-bottom-right-radius:4px;}
+.bub.bot{background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:4px;}
+.chat-foot{display:flex;align-items:center;gap:7px;justify-content:center;font-size:11.5px;color:var(--ok);font-weight:600;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);}
+.chat-foot svg{width:14px;height:14px;stroke-width:2.6;}
+
+/* agenda en línea (ilustración) */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start;}
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin-top:6px;}
+.checks li{position:relative;padding-left:28px;font-size:14px;color:var(--ink-2);line-height:1.45;}
+.checks li::before{content:"";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:rgba(22,163,74,.14);}
+.checks li::after{content:"";position:absolute;left:6px;top:5px;width:6px;height:9px;border:solid var(--ok);border-width:0 2px 2px 0;transform:rotate(40deg) scale(.9);}
+.checks li b{color:var(--ink);font-weight:600;}
+.phone{width:100%;max-width:340px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:22px 20px 20px;box-shadow:var(--shadow);position:relative;}
+.ph-top{display:flex;align-items:center;justify-content:space-between;font-family:var(--font-display);font-weight:600;font-size:15px;margin-bottom:16px;}
+.ph-tag{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);background:rgba(12,22,34,.06);padding:4px 9px;border-radius:999px;}
+.ph-label{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin:14px 0 8px;}
+.ph-opt{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 13px;border:1px solid var(--line);border-radius:12px;font-size:13px;margin-bottom:8px;}
+.ph-opt b{font-family:var(--font-display);font-size:11px;font-weight:600;color:var(--ink-2);white-space:nowrap;}
+.ph-opt.on{border-color:var(--brand);background:rgba(19,146,209,.07);}
+.ph-opt.on b{color:var(--ok);}
+.ph-slots{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:8px;}
+.ph-slots span{font-family:var(--font-display);font-weight:600;font-size:12.5px;padding:8px 13px;border:1px solid var(--line);border-radius:9px;color:var(--ink-2);}
+.ph-slots span.on{background:var(--brand);border-color:var(--brand);color:#fff;}
+.ph-btn{margin-top:16px;text-align:center;background:var(--ink);color:#fff;font-family:var(--font-display);font-weight:600;font-size:14px;padding:13px;border-radius:12px;}
+.ph-note{display:flex;align-items:center;justify-content:center;gap:7px;font-size:11.5px;color:var(--ink-2);margin-top:12px;}
+.ph-note svg{width:14px;height:14px;color:var(--ok);}
+
+/* campañas */
+.camp-rows{margin-top:14px;display:flex;flex-direction:column;}
+.camp-rows div{padding:10px 0;border-bottom:1px solid var(--line-2);}
+.camp-rows div:last-child{border-bottom:none;}
+.camp-rows span{display:block;font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-600);margin-bottom:2px;}
+.camp-rows b{font-weight:500;font-size:14px;color:var(--ink);}
+
+/* fases en tira */
+.phases{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative;padding-top:21px;}
+.phases::before{content:"";position:absolute;left:4%;right:4%;top:20px;height:2px;background:var(--line);}
+.ph{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:0 18px 20px;display:flex;flex-direction:column;}
+.ph .n{width:42px;height:42px;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:16px;display:grid;place-items:center;margin:-21px 0 14px;box-shadow:0 8px 20px -8px rgba(19,146,209,.6);}
+.ph h3{font-size:18px;}
+.ph ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px;}
+.ph li{position:relative;padding-left:20px;font-size:13px;color:var(--ink-2);line-height:1.45;}
+.ph li::before{content:"";position:absolute;left:0;top:5px;width:11px;height:11px;border-radius:50%;border:1.5px solid var(--brand-300);}
+.ph .cost{margin-top:auto;padding-top:14px;font-size:12px;color:var(--ink-2);}
+.ph .cost div{border-top:1px solid var(--line);padding-top:12px;margin-top:14px;min-height:100px;}
+.ph.opt .n{background:var(--ink);}
+
+/* planes de pauta */
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:start;}
+.plan{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;}
+.plan:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.plan.feat{border-color:var(--brand);box-shadow:var(--shadow);}
+.plan-tag{position:absolute;top:-13px;left:28px;font-family:var(--font-display);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--brand);padding:6px 13px;border-radius:999px;box-shadow:0 8px 18px -8px rgba(19,146,209,.75);}
+.plan h3{font-size:23px;}
+.plan .psub{color:var(--ink-2);font-size:13.5px;margin-top:9px;max-width:46ch;}
+.plan .price{font-family:var(--font-display);font-weight:700;font-size:clamp(32px,4vw,40px);letter-spacing:-.02em;margin-top:22px;display:flex;align-items:baseline;gap:9px;}
+.plan .price small{font-family:var(--font-body);font-weight:500;font-size:13px;color:var(--ink-2);letter-spacing:0;}
+.plan-list{list-style:none;margin:24px 0 0;padding:24px 0 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:11px;}
+.plan-list li{position:relative;padding-left:26px;font-size:13.5px;color:var(--ink-2);line-height:1.5;}
+.plan-list li::before{content:"";position:absolute;left:0;top:4px;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--brand-300);}
+.plans-note{color:var(--ink-2);font-size:13px;margin-top:22px;text-align:center;}
+.plans-note b{color:var(--ink);font-weight:600;}
+
+/* cotizador */
+.config{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:34px 32px;box-shadow:var(--shadow);align-items:start;}
+.mod-group-title{font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:28px 0 4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.mod-group-title:first-child{margin-top:0;}
+.mod-group-title .gtag{font-size:9.5px;letter-spacing:.1em;color:var(--brand-600);background:rgba(19,146,209,.10);padding:4px 9px;border-radius:999px;}
+.mod-group-note{font-size:12.5px;color:var(--ink-2);margin:6px 0 4px;max-width:52ch;}
+.mod-group-note.warn{color:var(--amber);}
+.mod-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);transition:opacity .18s ease;}
+.mod-row:last-of-type{border-bottom:none;}
+.mod-row.off{opacity:.55;}
+.mod-info{flex:1;min-width:0;}
+.mod-name{font-family:var(--font-display);font-weight:600;font-size:14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.mod-price{font-family:var(--font-display);font-size:12.5px;color:var(--brand-600);font-weight:600;}
+.mod-desc{font-size:12.5px;color:var(--ink-2);margin-top:4px;max-width:48ch;}
+.mod-sub{margin-top:11px;}
+.mod-right{display:flex;align-items:center;gap:12px;flex:none;padding-top:2px;}
+.toggle{position:relative;width:44px;height:26px;flex:none;}
+.toggle input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer;z-index:2;}
+.toggle .track{position:absolute;inset:0;border-radius:999px;background:rgba(12,22,34,.16);transition:background .18s ease;}
+.toggle .thumb{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(12,22,34,.3);transition:transform .18s ease;}
+.toggle input:hover ~ .track{background:rgba(12,22,34,.24);}
+.toggle input:checked ~ .track{background:var(--brand);}
+.toggle input:checked ~ .track:hover{background:var(--brand-600);}
+.toggle input:checked ~ .thumb{transform:translateX(18px);}
+.toggle input:focus-visible ~ .track{outline:2px solid var(--brand-600);outline-offset:3px;}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:9px;background:var(--bg);overflow:hidden;}
+.stepper button{width:28px;height:28px;border:none;background:none;color:var(--ink-2);font-family:var(--font-display);font-weight:600;font-size:15px;line-height:1;cursor:pointer;transition:background .15s,color .15s;}
+.stepper button:hover:not(:disabled){background:rgba(19,146,209,.10);color:var(--brand-600);}
+.stepper button:disabled{opacity:.3;cursor:not-allowed;}
+.stepper button:focus-visible,.seg button:focus-visible{outline:2px solid var(--brand-600);outline-offset:2px;}
+.stepper .q{min-width:24px;text-align:center;font-family:var(--font-display);font-weight:600;font-size:13px;}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:3px;gap:2px;}
+.seg button{border:none;background:none;font-family:var(--font-display);font-weight:600;font-size:12.5px;padding:7px 12px;border-radius:7px;color:var(--ink-2);cursor:pointer;transition:background .15s,color .15s;}
+.seg button:hover:not(.on){color:var(--brand-600);}
+.seg button.on{background:var(--brand);color:#fff;box-shadow:0 6px 14px -8px rgba(19,146,209,.8);}
+.defer-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.defer-row .tl{font-family:var(--font-display);font-weight:600;font-size:14px;}
+.defer-row .tt{font-size:12px;color:var(--ink-2);margin-top:3px;max-width:44ch;}
+.lock{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(22,163,74,.13);color:var(--ok);}
+.lock svg{width:13px;height:13px;stroke-width:2.6;}
+.summary{background:var(--ink);color:#EAF1F7;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;position:sticky;top:96px;}
+.summary h3{color:#fff;font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-display);}
+.gh{font-family:var(--font-display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9FB2C2;margin:18px 0 2px;}
+.sumline{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:#B8C6D4;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.10);}
+.sumline span:last-child{color:#fff;font-weight:600;font-family:var(--font-display);white-space:nowrap;}
+.sumline.empty{color:#7E93A6;font-style:italic;border-bottom:none;}
+.sumtot{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0 0;}
+.sumtot .lbl{font-size:13px;color:#B8C6D4;}
+.sumtot .t{font-family:var(--font-display);font-weight:700;font-size:21px;color:#fff;white-space:nowrap;}
+.sumtot .t small{font-size:12px;color:#9FB2C2;font-weight:500;font-family:var(--font-body);}
+.summary .btn{margin-top:20px;justify-content:center;}
+.disc-list{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:5px;}
+.disc-list li{position:relative;padding-left:13px;font-size:11px;color:#8094A6;line-height:1.5;}
+.disc-list li::before{content:"-";position:absolute;left:0;}
+
+/* cómo pagar */
+.pay-opts{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.pay-opt,.pay-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column;}
+.pay-opt .otag{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-600);margin-bottom:10px;}
+.pay-opt h3,.pay-card h3{font-size:19px;}
+.pay-opt .opt-price{font-family:var(--font-display);font-weight:700;font-size:clamp(30px,3.6vw,38px);margin-top:16px;line-height:1;}
+.pay-opt .opt-price small{font-size:13px;font-weight:500;font-family:var(--font-body);color:var(--ink-2);}
+.pay-opt .opt-sub,.pay-card .psub{font-size:13px;color:var(--ink-2);margin-top:12px;}
+.pay-opt .opt-rows{margin-top:16px;display:flex;flex-direction:column;}
+.pay-opt .opt-rows div{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--ink-2);padding:9px 0;border-bottom:1px solid var(--line-2);}
+.pay-opt .opt-rows div:last-child{border-bottom:none;}
+.pay-opt .opt-rows b{color:var(--ink);font-family:var(--font-display);}
+.pay-card .psub{margin:8px 0 14px;}
+.bank-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line-2);font-size:13.5px;color:var(--ink-2);}
+.bank-row:last-child{border-bottom:none;}
+.bank-row span:first-child{flex-shrink:0;}
+.bank-row .bv{display:flex;align-items:center;gap:8px;}
+.bank-row .bv b{color:var(--ink);font-weight:600;font-family:var(--font-display);font-size:13.5px;text-align:right;overflow-wrap:anywhere;}
+.copy-btn{flex-shrink:0;border:1px solid var(--line);background:var(--bg);color:var(--ink-2);font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:5px 9px;border-radius:6px;cursor:pointer;transition:all .15s;}
+.copy-btn:hover{border-color:var(--brand-300);color:var(--brand-600);}
+
+/* cierre */
+.cta-final{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+.cta-final h2{font-size:clamp(30px,4vw,46px);}
+.cta-final .sub{color:var(--ink-2);margin-top:16px;font-size:16px;}
+.contact-list{margin-top:26px;display:flex;flex-direction:column;gap:12px;}
+.contact-list a{display:inline-flex;align-items:center;gap:11px;font-weight:500;width:fit-content;}
+.contact-list a svg{width:18px;height:18px;color:var(--brand-600);}
+.contact-list a:hover{color:var(--brand-600);}
+.aside{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow);}
+.aside h3{font-size:17px;margin-bottom:16px;}
+.todo{list-style:none;display:flex;flex-direction:column;gap:11px;}
+.todo li{position:relative;padding-left:28px;font-size:14px;color:var(--ink-2);line-height:1.45;}
+.todo li::before{content:"";position:absolute;left:0;top:1px;width:17px;height:17px;border-radius:5px;border:2px solid var(--brand-300);}
+
+footer{background:var(--ink);color:#9FB2C2;padding:42px 0 36px;margin-top:84px;}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+.reveal.in{opacity:1;transform:none;}
+.d1{transition-delay:.06s}.d2{transition-delay:.14s}.d3{transition-delay:.24s}.d4{transition-delay:.34s}
+
+@media (max-width:1100px){
+  .chart{display:none;}
+  .cards.four{grid-template-columns:repeat(2,1fr);}
+  .phases{grid-template-columns:repeat(3,1fr);row-gap:34px;}
+  .phases::before{display:none;}
+}
+@media (max-width:900px){
+  .cards,.cards.four,.opp,.config,.cta-final,.pay-opts,.plans,.split,.phases,.vend-grid{grid-template-columns:1fr;}
+  .vend{padding:38px 22px;}
+  .checks{grid-template-columns:1fr;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .summary{position:static;}
+  .hero .glow{opacity:.3;}
+  .ring{width:240px;height:240px;right:-80px;top:10px;opacity:.28;}
+  .dark{padding:38px 22px;}
+  .config{padding:26px 20px;}
+  .flow{padding:24px 20px;}
+  .flow-track{flex-direction:column;align-items:stretch;}
+  .flow-node{flex-direction:row;text-align:left;padding:10px 0;}
+  .flow-node .flow-ico{width:40px;height:40px;}
+  .flow-arrow{align-self:center;padding-top:0;transform:rotate(90deg);}
+  .swap-head{display:none;}
+  .swap-row{grid-template-columns:1fr;gap:8px;}
+  .swap-row .arr{justify-content:start;transform:rotate(90deg);width:18px;}
+  .logo{width:21vw;max-width:101px;height:auto;}
+  .bar{height:60px;}
+  .tagfor{display:none;}
+  .bar .right{gap:12px;}
+  .btn{padding:10px 16px;font-size:14px;}
+  section.block{padding:64px 0;}
+}
+@media (max-width:520px){
+  .cards.four{grid-template-columns:1fr;}
+  .chat-top{flex-wrap:wrap;}
+  .chat-top .ph-tag{margin-left:46px;}
+  .hero{padding:64px 0 56px;}
+  .facts{gap:22px;}
+}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}.ring{animation:none;}html{scroll-behavior:auto;}}
+
+/* ===== CURSOR ===== */
+@media (pointer:fine){
+  *{cursor:none!important;}
+  #cur-dot{position:fixed;width:8px;height:8px;background:var(--brand);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s;}
+  #cur-halo{position:fixed;width:42px;height:42px;border:2px solid rgba(19,146,209,.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);box-shadow:0 0 14px rgba(19,146,209,.25);}
+  .cur-trail{position:fixed;border-radius:50%;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);animation:trail-out .55s ease-out forwards;}
+  @keyframes trail-out{0%{opacity:.65;width:7px;height:7px;}100%{opacity:0;width:2px;height:2px;}}
+}</style>
+</head>
+<body>
+
+<!-- Íconos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4M12 11v10"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 5v14M7 5v14M11 5v14M14 5v14M18 5v14M20.5 5v14"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5a3 3 0 0 1 0 6M18 14c2 .8 3 2.6 3 5"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9v11H3V9z"/><path d="M3 9h18M9 20v-6h6v6"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="4" rx="1"/><path d="M5 13v8h14v-8M12 9v12M12 9c-2 0-4-1-4-3s3-2.5 4 0c1-2.5 4-2 4 0s-2 3-4 3z"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.5-4M4 4v4h4M4 13a8 8 0 0 0 14.5 4M20 20v-4h-4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.7 1.7 0 0 1 0 3.4h-3a1.7 1.7 0 0 0 0 3.4h4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a href="#" aria-label="Konik"><img src="logo-konik.png" alt="Konik" class="logo"></a>
+    <div class="right">
+      <span class="tagfor">Propuesta para Ópticas California</span>
+      <a class="btn btn-primary" href="#contacto">Hablemos</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="glow"></div>
+    <svg class="ring" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <circle cx="100" cy="100" r="78" stroke="var(--brand)" stroke-width="6" stroke-linecap="round" stroke-dasharray="360 130" opacity=".85"/>
+      <circle cx="100" cy="100" r="60" stroke="var(--brand-300)" stroke-width="2" stroke-dasharray="4 10" opacity=".7"/>
+    </svg>
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="eyebrow reveal in d1">Propuesta para Ópticas California · Preparada para Yuri</span>
+        <h1 class="reveal in d2">Más pacientes en tu consultorio y un negocio que <span class="hl">funciona aunque no estés.</span></h1>
+        <p class="lede reveal in d3">Hoy tienes buenos servicios y herramientas a medias. Te proponemos tres piezas conectadas: Pulpos Pro, que ordena inventario y ventas y trae un vendedor virtual para tu WhatsApp; una página para agendar cita en línea; y anuncios que llenan esa agenda.</p>
+        <div class="cta-row reveal in d4">
+          <a class="btn btn-primary" href="#solucion">Ver propuesta
+            <svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#cotizador">Elige tus fases</a>
+        </div>
+        <div class="facts reveal in d4">
+          <div class="fact"><div class="n">3 piezas</div><div class="l">Orden, agenda y anuncios, conectados entre sí</div></div>
+          <div class="fact"><div class="n">5 fases</div><div class="l">Cada una se contrata sola</div></div>
+          <div class="fact"><div class="n">Examen gratis</div><div class="l">Tu puerta de entrada es el gancho de los anuncios</div></div>
+        </div>
+      </div>
+      <div class="chart reveal in d3" aria-hidden="true">
+        <span class="r r1">E</span>
+        <span class="r r2">FP</span>
+        <span class="r r3">TOZ</span>
+        <span class="r r4">LPED</span>
+        <span class="r r5">PECFD</span>
+        <span class="r r6">EDFCZP</span>
+        <span class="cap">Ver mejor, vender mejor</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LO QUE VIMOS ============ -->
+  <section class="block" id="entendimos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Lo que vimos</span>
+        <h2>El consultorio funciona. Lo que está desordenado es todo lo de atrás.</h2>
+        <p>Llevas casi dos años en León y la gente llega. Pero ventas, inventario, página y redes viven cada uno por su lado, y ninguno trae pacientes nuevos.</p>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><div class="n">200</div><div class="l">Armazones, casi una pieza de cada modelo</div></div>
+        <div class="stat"><div class="n">~50</div><div class="l">Cajas de lentes de contacto, sin registro</div></div>
+        <div class="stat"><div class="n">$500</div><div class="l">A la semana en brigadas, entre Uber y comida</div></div>
+        <div class="stat warn"><div class="n">1 a 2</div><div class="l">Likes por publicación en redes</div></div>
+      </div>
+
+      <div class="cards">
+        <div class="card reveal">
+          <div class="tool-top"><div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-pulse"/></svg></div><span class="status ok">Funciona</span></div>
+          <h3>Historia clínica</h3>
+          <p>Software en línea, unos $60 al mes. Marca cumpleaños pero no avisa. Se queda como está.</p>
+        </div>
+        <div class="card reveal d1">
+          <div class="tool-top"><div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-receipt"/></svg></div><span class="status bad">A mano</span></div>
+          <h3>Ventas</h3>
+          <p>Se anotan a mano en un Drive.</p>
+        </div>
+        <div class="card reveal d2">
+          <div class="tool-top"><div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-box"/></svg></div><span class="status bad">No hay</span></div>
+          <h3>Inventario</h3>
+          <p>Hubo un Excel con macros, pero se frenó con la idea del código de barras.</p>
+        </div>
+        <div class="card reveal">
+          <div class="tool-top"><div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-globe"/></svg></div><span class="status mid">A medias</span></div>
+          <h3>Página web</h3>
+          <p>Google Sites con catálogo y botón a WhatsApp. La agenda existe y nadie la usa.</p>
+        </div>
+        <div class="card reveal d1">
+          <div class="tool-top"><div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-chat"/></svg></div><span class="status mid">Manual</span></div>
+          <h3>WhatsApp y envíos</h3>
+          <p>Ahí se mandan servicios y catálogo. Los envíos con Skydrop se hacen a mano, de vez en cuando.</p>
+        </div>
+        <div class="card reveal d2">
+          <div class="tool-top"><div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-send"/></svg></div><span class="status mid">Sin respuesta</span></div>
+          <h3>Redes sociales</h3>
+          <p>Facebook e Instagram casi sin interacción. TikTok quedó abandonado.</p>
+        </div>
+      </div>
+
+      <div class="dark reveal" id="oportunidad" style="margin-top:44px;">
+        <div class="glow"></div>
+        <span class="eyebrow">Lo que descubrimos</span>
+        <h2>Nadie llega por un armazón. Llegan por la consulta y luego compran.</h2>
+        <div class="opp">
+          <div>
+            <div class="lead">La consulta es la puerta</div>
+            <div class="txt">El examen de agudeza visual es gratis y es lo que trae gente: primero en las brigadas con el DIF y el municipio, después sus familiares.</div>
+          </div>
+          <div>
+            <div class="lead">El producto va después</div>
+            <div class="txt">Armazones, micas y lentes de contacto se venden a quien ya se atendió contigo. Por eso los anuncios de servicio van primero y los de catálogo después.</div>
+          </div>
+          <div>
+            <div class="lead">Lo que ya pasa se pierde</div>
+            <div class="txt">Los pacientes de brigada no quedan en ningún sistema, y sin registro no hay a quién volver a escribirle.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LA SOLUCIÓN ============ -->
+  <section class="block" id="solucion" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">La solución</span>
+        <h2>Tres piezas que se hablan entre sí.</h2>
+        <p>Pulpos ordena el negocio, una página agenda las citas y Meta Ads llena la agenda. Tu historial clínico se queda donde está.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="fase-num">1</div>
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-box"/></svg></div>
+          <h3>Pulpos Pro</h3>
+          <p>Inventario, punto de venta y facturación en una sola app, en español, con un vendedor virtual que atiende tu WhatsApp.</p>
+          <div class="phase-time">Deja atrás: ventas en Drive y mensajes contestados a mano</div>
+        </div>
+        <div class="card reveal d1">
+          <div class="fase-num">2</div>
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-cal"/></svg></div>
+          <h3>Landing de citas</h3>
+          <p>Una página con tu propio dominio donde el paciente elige servicio, día y hora, y recibe recordatorio por WhatsApp.</p>
+          <div class="phase-time">Deja atrás: el Google Sites donde nadie agenda</div>
+        </div>
+        <div class="card reveal d2">
+          <div class="fase-num">3</div>
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-send"/></svg></div>
+          <h3>Anuncios en Meta</h3>
+          <p>Campañas locales con el examen gratis como gancho. Se miden en citas agendadas, no en likes.</p>
+          <div class="phase-time">Se suma a: las brigadas con el DIF y el municipio</div>
+        </div>
+      </div>
+
+      <div class="dark reveal" style="margin-top:44px;">
+        <div class="glow"></div>
+        <span class="eyebrow">Antes y después</span>
+        <h2>Cada dolor que nombraste tiene una pieza que lo resuelve.</h2>
+        <div class="swap">
+          <div class="swap-head"><span>Hoy</span><span></span><span>Con la propuesta</span></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Ventas apuntadas a mano en Drive</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Pulpos</span>Punto de venta, cortes de caja y reportes</div></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Sin inventario desde hace casi dos años</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Pulpos</span>Inventario con etiquetas de código de barras y conteos</div></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Un catálogo que no trae pacientes nuevos</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Pulpos</span><span class="pill">Meta</span>Tienda en línea y anuncios de catálogo</div></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Una agenda en línea que nadie usa</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Landing</span>Página de citas y anuncios que mandan gente ahí</div></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Depender solo de las brigadas</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Meta</span>Anuncios locales con el examen gratis como gancho</div></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Contestar el WhatsApp a mano, a cualquier hora</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Pulpos</span>Vendedor virtual que responde y registra pedidos</div></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Redes con 1 o 2 likes</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Meta</span>Contenido de salud visual que también sirve de anuncio</div></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Cumpleaños que se pasan sin aviso</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Pulpos</span>Base de pacientes y mensajes automáticos por WhatsApp</div></div>
+          <div class="swap-row"><div class="was"><span class="x">✕</span>Shopify abandonado por complicado</div><div class="arr"><svg class="i" viewBox="0 0 24 24"><use href="#i-next"/></svg></div><div class="now"><span class="pill">Pulpos</span>Una sola app, en español, con capacitación y soporte</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLUJO DEL PACIENTE ============ -->
+  <section class="block" id="flujo" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Cómo funciona</span>
+        <h2>De un anuncio a la revisión del año siguiente.</h2>
+        <p>Los anuncios llenan la agenda. La consulta y la venta quedan registradas en Pulpos, y el seguimiento hace que vuelvan.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-track">
+          <div class="flow-node">
+            <div class="flow-ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-send"/></svg></div>
+            <div class="flow-label">Anuncio</div>
+            <div class="flow-sub">Meta Ads y redes, con el examen gratis</div>
+          </div>
+          <div class="flow-arrow"><svg class="i" viewBox="0 0 24 24"><use href="#i-chev"/></svg></div>
+          <div class="flow-node featured">
+            <div class="flow-ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-cal"/></svg></div>
+            <div class="flow-label">Cita en línea</div>
+            <div class="flow-sub">Landing con agenda y recordatorio</div>
+          </div>
+          <div class="flow-arrow"><svg class="i" viewBox="0 0 24 24"><use href="#i-chev"/></svg></div>
+          <div class="flow-node">
+            <div class="flow-ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-eye"/></svg></div>
+            <div class="flow-label">Consulta</div>
+            <div class="flow-sub">Examen o consulta completa</div>
+          </div>
+          <div class="flow-arrow"><svg class="i" viewBox="0 0 24 24"><use href="#i-chev"/></svg></div>
+          <div class="flow-node">
+            <div class="flow-ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-store"/></svg></div>
+            <div class="flow-label">Venta</div>
+            <div class="flow-sub">En el local o por WhatsApp, todo en Pulpos</div>
+          </div>
+          <div class="flow-arrow"><svg class="i" viewBox="0 0 24 24"><use href="#i-chev"/></svg></div>
+          <div class="flow-node">
+            <div class="flow-ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-refresh"/></svg></div>
+            <div class="flow-label">Vuelve</div>
+            <div class="flow-sub">Cumpleaños, revisión anual y recompra</div>
+          </div>
+        </div>
+        <div class="flow-loops">
+          <div class="flow-loop"><span class="dot"></span>Quien visita la página y no agenda ve después un anuncio de catálogo.</div>
+          <div class="flow-loop"><span class="dot"></span>Los pacientes de brigada entran a la base y reciben seguimiento.</div>
+          <div class="flow-loop"><span class="dot"></span>Cada año, un recordatorio por WhatsApp para su revisión.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PIEZA 1: PULPOS ============ -->
+  <section class="block" id="pulpos" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Pieza 1 · Pulpos Pro</span>
+        <h2>Una app para todo el negocio, con un vendedor virtual.</h2>
+        <p>Cargamos tus 200 armazones, capacitamos a tu equipo y dejas el Drive. Tu software de historia clínica sigue igual.</p>
+      </div>
+
+      <div class="dark vend reveal">
+        <div class="glow"></div>
+        <div class="vend-grid">
+          <div>
+            <span class="eyebrow">Vendedor virtual</span>
+            <h2>Atiende tu WhatsApp aunque el local esté cerrado.</h2>
+            <p class="vend-lead">El que viste en la demo de Casa Cerela, ahora con tu catálogo de armazones y lentes.</p>
+            <ul class="vend-list">
+              <li><span class="vi"><svg class="i" viewBox="0 0 24 24"><use href="#i-clock"/></svg></span><div><b>Responde al momento</b><span class="d">Contesta con modelo, color y precio de tu catálogo en tiempo real, también fuera del horario del local.</span></div></li>
+              <li><span class="vi"><svg class="i" viewBox="0 0 24 24"><use href="#i-check"/></svg></span><div><b>Registra el pedido</b><span class="d">Si el paciente arma un pedido, queda registrado para que tu equipo lo procese al día siguiente.</span></div></li>
+              <li><span class="vi"><svg class="i" viewBox="0 0 24 24"><use href="#i-coin"/></svg></span><div><b>Cotiza solo</b><span class="d">Cotiza los pedidos que llegan por WhatsApp con tu lista de precios.</span></div></li>
+              <li><span class="vi"><svg class="i" viewBox="0 0 24 24"><use href="#i-send"/></svg></span><div><b>Trabaja con tu catálogo en línea</b><span class="d">Un enlace único para compartir en Instagram, Facebook, TikTok o WhatsApp. El paciente elige y paga con Mercado Pago.</span></div></li>
+              <li><span class="vi"><svg class="i" viewBox="0 0 24 24"><use href="#i-pulse"/></svg></span><div><b>También te responde a ti</b><span class="d">Le preguntas cuánto vendiste este mes y te contesta. Te avisa cuando un producto está por agotarse.</span></div></li>
+            </ul>
+          </div>
+          <div class="chat" role="img" aria-label="Ilustración de una conversación de WhatsApp con el vendedor virtual">
+            <div class="chat-top"><span class="chat-av">VV</span><div><b>Ópticas California</b><small>Vendedor virtual · en línea</small></div><span class="ph-tag">Ilustración</span></div>
+            <div class="chat-time">11:48 pm · Fuera de horario</div>
+            <div class="bub me">Hola, ¿tienen este armazón en color negro?</div>
+            <div class="bub bot">Sí, hay una pieza disponible en negro. Te paso el precio y el enlace para pedirlo.</div>
+            <div class="bub me">Lo quiero.</div>
+            <div class="bub bot">Listo, tu pedido quedó registrado. Mañana el equipo lo confirma contigo.</div>
+            <div class="chat-foot"><svg class="i" viewBox="0 0 24 24"><use href="#i-check"/></svg>Pedido registrado para tu equipo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-bottom:18px;"><span class="eyebrow">Y además, en la misma app</span></div>
+      <div class="cards">
+        <div class="card mini reveal">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-scan"/></svg></div>
+          <h3>Inventario con código de barras</h3>
+          <p>Etiquetas, lectora y conteos. Cada enero recargas la colección nueva desde Excel.</p>
+        </div>
+        <div class="card mini reveal d1">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-store"/></svg></div>
+          <h3>Vende escaneando</h3>
+          <p>Punto de venta con lectora y cortes de caja al día.</p>
+        </div>
+        <div class="card mini reveal d2">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-clock"/></svg></div>
+          <h3>Lente apartado</h3>
+          <p>Queda pagado mientras la mica está en el laboratorio.</p>
+        </div>
+        <div class="card mini reveal">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-coin"/></svg></div>
+          <h3>Abonos y cuentas por cobrar</h3>
+          <p>Lentes pagados en parcialidades, sin perder la cuenta.</p>
+        </div>
+        <div class="card mini reveal d1">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-receipt"/></svg></div>
+          <h3>Facturas ilimitadas</h3>
+          <p>CFDI 4.0 sin pagar timbres aparte.</p>
+        </div>
+        <div class="card mini reveal d2">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-gift"/></svg></div>
+          <h3>Pacientes y monedero</h3>
+          <p>Base con fecha de cumpleaños y puntos para la recompra.</p>
+        </div>
+      </div>
+      <div class="chips reveal">
+        <span class="chip">Lotes y caducidades</span>
+        <span class="chip">Usuarios con permisos</span>
+        <span class="chip">Ventas por vendedor</span>
+        <span class="chip">Tienda en línea con Mercado Pago</span>
+        <span class="chip">Varias sucursales</span>
+      </div>
+      <div class="trial-box reveal">
+        <div>
+          <div class="th">Tu historial clínico no se toca</div>
+          <div class="tp">Pulpos lleva lo comercial. El expediente sigue en el software que ya usas.</div>
+        </div>
+        <span class="status ok">14 días de prueba gratis</span>
+      </div>
+      <p class="small-note reveal">Plan Pulpos Pro: $599 + IVA al mes, en un solo pago anual de $7,188 + IVA. Es el precio de la Fase 1 e incluye usuarios, productos, ventas y facturas ilimitados.</p>
+    </div>
+  </section>
+
+  <!-- ============ PIEZA 2: LANDING DE CITAS ============ -->
+  <section class="block" id="landing" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Pieza 2 · Landing de citas</span>
+        <h2>Una página para que agenden sin escribirte.</h2>
+        <p>La cita es lo que trae al paciente, y Pulpos no agenda. Esta página es la puerta de entrada de los anuncios y reemplaza al Google Sites.</p>
+      </div>
+      <div class="split">
+        <ul class="checks reveal">
+          <li><b>Dominio propio nuevo</b></li>
+          <li>Mensaje de profesionales de la salud visual</li>
+          <li>Servicios por paquete con precio, empezando por el examen gratis</li>
+          <li>Agenda en línea con confirmación y recordatorio por WhatsApp</li>
+          <li>Botón de WhatsApp para quien prefiere preguntar</li>
+          <li>Liga a tu catálogo de armazones</li>
+          <li>Píxel de Meta para medir cuánto cuesta cada cita</li>
+          <li>Selector de sucursal desde el diseño, aunque hoy solo haya una</li>
+        </ul>
+        <div class="phone reveal d1" role="img" aria-label="Ilustración de la agenda en línea: elegir servicio, día y hora">
+          <div class="ph-top">Agenda tu cita<span class="ph-tag">Ilustración</span></div>
+          <div class="ph-label">1 · Servicio</div>
+          <div class="ph-opt on"><span>Examen de agudeza visual</span><b>Gratis</b></div>
+          <div class="ph-opt"><span>Consulta completa</span><b>Con costo</b></div>
+          <div class="ph-opt"><span>Terapia de calor y lubricación</span><b>Paquete</b></div>
+          <div class="ph-label">2 · Día y hora</div>
+          <div class="ph-slots"><span>Lun</span><span class="on">Mar</span><span>Mié</span></div>
+          <div class="ph-slots"><span>10:00</span><span class="on">11:30</span><span>17:00</span></div>
+          <div class="ph-btn">Agendar cita</div>
+          <div class="ph-note"><svg class="i" viewBox="0 0 24 24"><use href="#i-chat"/></svg>Confirmación y recordatorio por WhatsApp</div>
+        </div>
+      </div>
+      <p class="small-note reveal" style="margin-top:28px;">Cada peso de publicidad se mide en citas agendadas.</p>
+    </div>
+  </section>
+
+  <!-- ============ PIEZA 3: META ADS ============ -->
+  <section class="block" id="meta" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Pieza 3 · Anuncios en Meta</span>
+        <h2>Primero llenamos la agenda. Después, el catálogo.</h2>
+        <p>Tres campañas con destinos distintos, porque el paciente llega por el servicio y compra el producto más tarde.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-cal"/></svg></div>
+          <h3>Servicios</h3>
+          <div class="camp-rows">
+            <div><span>Destino</span><b>Landing de citas</b></div>
+            <div><span>A quién</span><b>Radio local alrededor de la plaza</b></div>
+            <div><span>Meta</span><b>Citas agendadas: examen gratis, consulta completa, terapia de calor</b></div>
+          </div>
+        </div>
+        <div class="card reveal d1">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-store"/></svg></div>
+          <h3>Catálogo</h3>
+          <div class="camp-rows">
+            <div><span>Destino</span><b>Tienda en línea de Pulpos</b></div>
+            <div><span>A quién</span><b>Quien visitó la página, pacientes actuales y públicos similares</b></div>
+            <div><span>Meta</span><b>Venta de armazones, lentes de contacto, soluciones y accesorios</b></div>
+          </div>
+        </div>
+        <div class="card reveal d2">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-chat"/></svg></div>
+          <h3>Mensajes</h3>
+          <div class="camp-rows">
+            <div><span>Destino</span><b>WhatsApp, atendido por el vendedor virtual</b></div>
+            <div><span>A quién</span><b>Quien interactúa con anuncios o redes</b></div>
+            <div><span>Meta</span><b>Resolver dudas y llevar al paciente a su cita o su pedido</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="cards" style="margin-top:20px;">
+        <div class="card mini reveal">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-eye"/></svg></div>
+          <h3>Contenido que enseña</h3>
+          <p>Reels y carruseles sobre presión intraocular, ojo seco, glucosa y vista. Te posicionan como profesional y sirven de anuncio.</p>
+        </div>
+        <div class="card mini reveal d1">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-users"/></svg></div>
+          <h3>Las brigadas dejan huella</h3>
+          <p>Registramos en Pulpos a quien atiendes en cada brigada para darle seguimiento. Hoy esos datos se pierden.</p>
+        </div>
+        <div class="card mini reveal d2">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
+          <h3>Sin promesas médicas</h3>
+          <p>Los anuncios no prometen curas. Las gotas oftálmicas se anuncian hasta tener el permiso de COFEPRIS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESCALA ============ -->
+  <section class="block" id="escala" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Si algún día abres otra</span>
+        <h2>Una sucursal nueva se agrega al sistema. No se empieza de cero.</h2>
+        <p>En Chiapas ya demostraron que saben abrir sucursales. Lo que faltó fue un sistema que funcionara sin que estuvieran ahí.</p>
+      </div>
+      <div class="cards four">
+        <div class="card mini reveal">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-box"/></svg></div>
+          <h3>Inventario conectado</h3>
+          <p>Traspasos entre sucursales y un almacén central.</p>
+        </div>
+        <div class="card mini reveal d1">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-users"/></svg></div>
+          <h3>Equipo con su acceso</h3>
+          <p>Un encargado por sucursal ve solo la suya, y cada venta queda a nombre de quien la hizo.</p>
+        </div>
+        <div class="card mini reveal d2">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-pulse"/></svg></div>
+          <h3>Una base de pacientes</h3>
+          <p>Cualquier sucursal reconoce al paciente.</p>
+        </div>
+        <div class="card mini reveal d3">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#i-pin"/></svg></div>
+          <h3>Anuncios por zona</h3>
+          <p>Una campaña con radio en cada sucursal, con los anuncios que ya funcionaron.</p>
+        </div>
+      </div>
+      <div class="chips reveal">
+        <span class="chip">Selector de sucursal con su agenda y su mapa</span>
+        <span class="chip">Reportes y cortes por sucursal desde el celular</span>
+        <span class="chip">Venta nacional desde el almacén con más existencia</span>
+        <span class="chip">$3,108 + IVA al año por sucursal</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FASES ============ -->
+  <section class="block" id="fases" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Cómo se organiza</span>
+        <h2>Cinco fases. Contratas las que quieras, una por una.</h2>
+        <p>Orden primero, tráfico después. Si llegan pacientes nuevos antes de tener inventario y agenda, caen en el mismo desorden.</p>
+      </div>
+      <div class="phases reveal">
+        <div class="ph">
+          <div class="n">1</div>
+          <h3>Orden</h3>
+          <ul>
+            <li>Alta de Pulpos Pro</li>
+            <li>Inventario con código de barras</li>
+            <li>Clientes y facturación</li>
+            <li>Vendedor virtual en tu WhatsApp</li>
+            <li>Capacitación al equipo</li>
+          </ul>
+          <div class="cost"><div>Fase 1: $7,188 + IVA, el costo anual de Pulpos Pro. Empiezas con 14 días de prueba gratis.</div></div>
+        </div>
+        <div class="ph">
+          <div class="n">2</div>
+          <h3>Agenda</h3>
+          <ul>
+            <li>Landing con dominio propio</li>
+            <li>Agenda en línea con recordatorio</li>
+            <li>Píxel y eventos de Meta</li>
+          </ul>
+          <div class="cost"><div>Landing con agenda: $17,325 + IVA. Dominio y herramienta de agenda: por definir.</div></div>
+        </div>
+        <div class="ph opt">
+          <div class="n">3</div>
+          <h3>Atraer</h3>
+          <ul>
+            <li>Campañas de servicios y catálogo</li>
+            <li>Contenido educativo de salud visual</li>
+            <li>Reporte de costo por cita</li>
+          </ul>
+          <div class="cost"><div>Gestión mensual desde $5,900. La pauta la defines tú.</div></div>
+        </div>
+        <div class="ph">
+          <div class="n">4</div>
+          <h3>Retener</h3>
+          <ul>
+            <li>Monedero electrónico</li>
+            <li>Cumpleaños con obsequio</li>
+            <li>Recordatorio de revisión anual</li>
+            <li>Recompra de lentes de contacto por WhatsApp</li>
+          </ul>
+          <div class="cost"><div>Setup de Konik: por definir.</div></div>
+        </div>
+        <div class="ph">
+          <div class="n">5</div>
+          <h3>Escalar</h3>
+          <ul>
+            <li>Venta nacional en la tienda en línea</li>
+            <li>Sucursales nuevas con el mismo sistema</li>
+          </ul>
+          <div class="cost"><div>$3,108 + IVA al año por sucursal. Mercado Pago cobra 1% por venta en línea.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GESTIÓN MENSUAL DE META ADS ============ -->
+  <!-- ✏️ PRECIO — mensualidades de gestión de pauta en .price (y en META dentro del script) -->
+  <section class="block" id="pauta" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Fase 3 · Gestión mensual</span>
+        <h2>Meta Ads, gestionado por nosotros.</h2>
+        <p>Dos niveles para elegir qué tan rápido quieres crecer. Tú no tocas el administrador de anuncios.</p>
+      </div>
+      <div class="plans">
+        <div class="plan reveal">
+          <h3>Crecimiento</h3>
+          <p class="psub">Para conseguir las primeras citas y saber cuánto cuesta cada una.</p>
+          <div class="price">$5,900 <small>MXN / mes</small></div>
+          <ul class="plan-list">
+            <li>Anuncios en Facebook e Instagram, de servicios y de catálogo</li>
+            <li>Radio local alrededor de tu plaza</li>
+            <li>Ajustes quincenales y reporte mensual con costo por cita</li>
+            <li>Creativos armados con tu contenido y tu catálogo</li>
+          </ul>
+        </div>
+        <div class="plan feat reveal d1">
+          <span class="plan-tag">Recomendado para escalar</span>
+          <h3>Autopilot</h3>
+          <p class="psub">El embudo completo: gente nueva, seguimiento y recompra al mismo tiempo.</p>
+          <div class="price">$7,900 <small>MXN / mes</small></div>
+          <ul class="plan-list">
+            <li>Campañas de servicios, catálogo y mensajes</li>
+            <li>Anuncios para quien visitó la página y públicos similares</li>
+            <li>Seguimiento por WhatsApp a quien interactúa</li>
+            <li>Reporte semanal de citas y costo por cita</li>
+            <li>Contenido educativo y reunión mensual de resultados</li>
+            <li>Setup incluido: auditoría de cuenta, píxel y eventos de conversión</li>
+          </ul>
+        </div>
+      </div>
+      <p class="plans-note reveal">La inversión en pauta va directo a Meta: <b>tú la controlas, nosotros la ajustamos.</b> Sugerimos una prueba de 30 días y escalar según el costo por cita.</p>
+    </div>
+  </section>
+
+  <!-- ============ COTIZADOR (CONFIGURABLE) ============ -->
+  <section class="block" id="cotizador" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Cotizador</span>
+        <h2>Arma la propuesta a tu medida.</h2>
+        <p>Elige las fases y si quieres que gestionemos tus anuncios. Los montos se recalculan al momento.</p>
+      </div>
+      <div class="config reveal">
+        <div class="controls" id="controls"></div>
+
+        <div class="summary">
+          <h3>Propuesta para Ópticas California</h3>
+
+          <div class="gh">Setup · pago único, más IVA</div>
+          <div id="sumSetup"></div>
+          <div class="sumtot"><span class="lbl">Setup sin IVA</span><span class="t" id="sumSetupNeto">Por definir</span></div>
+          <div class="sumline"><span>Total con IVA</span><span id="sumSetupTotal">Por definir</span></div>
+          <div class="sumline"><span>Anticipo al firmar (40%)</span><span id="sumAnticipoVal">Por definir</span></div>
+          <div class="sumtot"><span class="lbl" id="sumDeferLbl">3 mensualidades de</span><span class="t" id="sumDeferPer">Por definir</span></div>
+
+          <div class="gh">Pulpos · sucursales, al año más IVA</div>
+          <div id="sumPlat"></div>
+          <div class="sumtot"><span class="lbl">Sucursales al año</span><span class="t" id="sumPlatTotal">$0</span></div>
+
+          <div class="gh">Gestión mensual · Meta Ads</div>
+          <div id="sumMeta"></div>
+
+          <button class="btn btn-primary" id="downloadBtn" type="button">Descargar propuesta
+            <svg class="i" viewBox="0 0 24 24"><use href="#i-down"/></svg>
+          </button>
+          <ul class="disc-list">
+            <li>Precios en MXN, más IVA.</li>
+            <li>La Fase 1 es la licencia anual de Pulpos Pro, en un solo pago anual. Cubre el primer año.</li>
+            <li>Dominio y herramienta de agenda, por definir.</li>
+            <li>Mercado Pago cobra 1% por venta en línea.</li>
+            <li>La inversión en pauta va directo a Meta y no está incluida.</li>
+            <li>La carga de foto de receta en la tienda en línea se valida con Pulpos antes de prometerla.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO PAGAR ============ -->
+  <section class="block" id="pago" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Cómo pagar</span>
+        <h2>Arrancas con el 40% y el resto en tres meses.</h2>
+        <p>El 40% se calcula sobre el total con IVA y se paga por transferencia. La gestión de Meta y la pauta van aparte.</p>
+      </div>
+      <div class="pay-opts reveal">
+        <div class="pay-opt">
+          <div class="otag">Esquema estándar</div>
+          <h3>40% para arrancar, resto en 3 meses</h3>
+          <div class="opt-price"><span id="stdAnticipoVal">Por definir</span><small> al confirmar</small></div>
+          <div class="opt-sub">Confirmamos el alcance y con el anticipo arrancamos. El resto se divide en 3 mensualidades iguales.</div>
+          <div class="opt-rows">
+            <div><span>3 mensualidades de</span><b id="stdMensualidadVal">Por definir</b></div>
+            <div><span>Total del setup, con IVA</span><b id="stdTotalVal">Por definir</b></div>
+          </div>
+        </div>
+        <div class="pay-card">
+          <h3>Transferencia bancaria</h3>
+          <div class="psub">Sirve para el anticipo y para cada mensualidad.</div>
+          <div class="bank-row">
+            <span>CLABE</span>
+            <span class="bv"><b id="clabeVal">722969040898120238</b><button class="copy-btn" id="copyClabe" type="button">Copiar</button></span>
+          </div>
+          <div class="bank-row">
+            <span>Beneficiario</span>
+            <span class="bv"><b>Luis Alejandro Hernández Rentería</b></span>
+          </div>
+          <div class="bank-row">
+            <span>Institución</span>
+            <span class="bv"><b>Mercado Pago W</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CIERRE / CONTACTO ============ -->
+  <section class="block" id="contacto" style="padding-top:0;">
+    <div class="wrap cta-final">
+      <div class="reveal">
+        <span class="eyebrow">Hablemos, Yuri</span>
+        <h2>Empecemos por ordenar tu óptica.</h2>
+        <p class="sub">Ya viste cómo se ve. Ahora toca decidir por dónde arrancar y a qué ritmo. Tú pones el ritmo, nosotros ponemos el sistema, la agenda y los anuncios.</p>
+        <div class="contact-list">
+          <a href="https://wa.me/message/F6HBJHEAHJENM1"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp directo</a>
+          <a href="mailto:hola@konik.com.mx"><svg class="i" viewBox="0 0 24 24"><use href="#i-mail"/></svg>hola@konik.com.mx</a>
+          <a href="https://www.konik.com.mx"><svg class="i" viewBox="0 0 24 24"><use href="#i-globe"/></svg>konik.com.mx</a>
+        </div>
+      </div>
+      <div class="aside reveal d1">
+        <h3>Para afinar los números, platiquemos de:</h3>
+        <ul class="todo">
+          <li>Cómo se llama tu software de historia clínica</li>
+          <li>Cuánto quieres invertir al mes en anuncios</li>
+          <li>Cuántos pacientes atiendes al mes y el ticket promedio, en servicio y en producto</li>
+          <li>Cuántas personas trabajan en la óptica</li>
+          <li>Si facturas hoy y cuántas facturas al mes</li>
+          <li>Si te gustaría abrir otra sucursal más adelante</li>
+          <li>Si ya tienes fotos de tus armazones o hay que tomarlas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo-konik.png" alt="Konik" class="logo-footer">
+    <div style="font-size:13px;">Propuesta confidencial para Ópticas California · © <span id="y"></span> Konik</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  (function(){
+    // ✏️ Anticipo como % del total del setup (con IVA), meses para diferir el resto e IVA
+    const ANTICIPO_PCT=0.40;
+    const DEFER_MONTHS=3;
+    const IVA=0.16;
+
+    // ✏️ PRECIO — precio por fase, en MXN sin IVA. null = "Por definir".
+    // Fase 1 = licencia anual de Pulpos Pro, pagada en un solo pago anual ($599 al mes × 12).
+    const SETUP=[
+      {id:'f1',nombre:'Fase 1 · Orden',desc:'Licencia anual de Pulpos Pro, inventario con código de barras, clientes, facturación, vendedor virtual en WhatsApp y capacitación al equipo.',precio:7188,on:true},
+      {id:'f2',nombre:'Fase 2 · Agenda',desc:'Landing page con agenda en línea, dominio propio, botón de WhatsApp, píxel y eventos de Meta.',precio:17325,on:true},
+      {id:'f4',nombre:'Fase 4 · Retener',desc:'Monedero, cumpleaños con obsequio, recordatorio de revisión anual y recompra de lentes de contacto por WhatsApp.',precio:null,on:false},
+      {id:'f5',nombre:'Fase 5 · Escalar',desc:'Venta nacional en la tienda en línea y alta de sucursales nuevas con el mismo sistema.',precio:null,on:false},
+    ];
+    // ✏️ PRECIO — sucursal adicional de Pulpos (MXN + IVA al año, precio publicado por Pulpos)
+    const SUCURSAL_ANUAL=3108;
+    // ✏️ PRECIO — gestión mensual de Meta Ads, fase 3 (MXN / mes)
+    const META={
+      crecimiento:{nombre:'Crecimiento',mes:5900,resumen:'Anuncios de servicios y catálogo en Facebook e Instagram, radio local, ajustes quincenales y reporte mensual con costo por cita.'},
+      autopilot:{nombre:'Autopilot',mes:7900,resumen:'Embudo completo: servicios, catálogo y mensajes, anuncios para visitantes y públicos similares, seguimiento por WhatsApp, reporte semanal y reunión mensual.'},
+    };
+
+    const S={suc:0,meta:'ninguno'};
+
+    const $=id=>document.getElementById(id);
+    const fmt=n=>'$'+Math.round(n).toLocaleString('es-MX');
+    const money=n=>n==null?'Por definir':fmt(n);
+    const conIva=m=>m.precio==null?'Por definir':fmt(m.precio)+' + IVA';
+
+    // Logo precargado como dataURL para el header del PDF
+    let logoDataUrl=null;
+    const LOGO_ASPECT=1200/628;
+    (function preloadLogo(){
+      const img=new Image();
+      img.onload=()=>{
+        try{
+          const canvas=document.createElement('canvas');
+          canvas.width=img.naturalWidth; canvas.height=img.naturalHeight;
+          canvas.getContext('2d').drawImage(img,0,0);
+          logoDataUrl=canvas.toDataURL('image/png');
+        }catch(e){}
+      };
+      img.src='logo-konik.png';
+    })();
+
+    // Setup: precios sin IVA. El anticipo y las mensualidades salen del total con IVA,
+    // y solo se calculan cuando todas las fases elegidas ya tienen precio.
+    function calc(){
+      const sel=SETUP.filter(m=>m.on);
+      const pend=sel.filter(m=>m.precio==null);
+      const neto=sel.reduce((s,m)=>s+(m.precio||0),0);
+      const completo=pend.length===0;
+      const total=completo?neto*(1+IVA):null;
+      const anticipo=completo?total*ANTICIPO_PCT:null;
+      const mensual=completo?(total-anticipo)/DEFER_MONTHS:null;
+      const plat=[];
+      if(SETUP[0].on && S.suc>0) plat.push({nombre:'Sucursales adicionales ×'+S.suc,monto:S.suc*SUCURSAL_ANUAL});
+      const platTotal=plat.reduce((s,x)=>s+x.monto,0);
+      const meta=S.meta==='ninguno'?null:META[S.meta];
+      return {sel,pend,neto,total,anticipo,mensual,plat,platTotal,meta};
+    }
+
+    // ── Controles ──
+    function toggle(kind,id,on,label){
+      return `<label class="toggle"><input type="checkbox" data-k="${kind}" data-id="${id}" data-fk="t-${kind}-${id}" ${on?'checked':''} aria-label="${label}"><span class="track"></span><span class="thumb"></span></label>`;
+    }
+    function seg(act,opts,current){
+      return `<div class="seg" role="group">`+opts.map(o=>`<button type="button" class="${o.v===current?'on':''}" data-act="${act}" data-v="${o.v}" data-fk="s-${act}-${o.v}" aria-pressed="${o.v===current}">${o.l}</button>`).join('')+`</div>`;
+    }
+    function row(o){
+      return `<div class="mod-row${o.off?' off':''}"><div class="mod-info"><div class="mod-name">${o.name}${o.price?` <span class="mod-price">${o.price}</span>`:''}</div><div class="mod-desc">${o.desc}</div>${o.sub?`<div class="mod-sub">${o.sub}</div>`:''}</div><div class="mod-right">${o.right||''}</div></div>`;
+    }
+    const LOCK='<span class="lock"><svg class="i" viewBox="0 0 24 24"><use href="#i-check"/></svg>Fijo</span>';
+
+    function renderControls(){
+      const f2=SETUP.find(m=>m.id==='f2');
+      let h='<div class="mod-group-title">Setup de Konik<span class="gtag">Pago único, más IVA</span></div>';
+      h+=SETUP.map(m=>row({name:m.nombre,price:conIva(m),desc:m.desc,right:toggle('setup',m.id,m.on,m.nombre),off:!m.on})).join('');
+
+      const pulpos=SETUP[0].on;
+      h+='<div class="mod-group-title">Pulpos · sucursales adicionales<span class="gtag">Al año, más IVA</span></div>';
+      h+=row({
+        name:'Sucursales adicionales'+(S.suc>0?' ×'+S.suc:''),
+        price:pulpos&&S.suc>0?fmt(S.suc*SUCURSAL_ANUAL)+' + IVA':'',
+        desc:fmt(SUCURSAL_ANUAL)+' + IVA al año por cada una. Hoy no la necesitas, pero así ves cuánto costaría abrir otra.',
+        right:`<div class="stepper"><button type="button" data-act="suc-" data-fk="b-suc-" aria-label="Quitar una sucursal" ${!pulpos||S.suc<1?'disabled':''}>−</button><span class="q">${S.suc}</span><button type="button" data-act="suc+" data-fk="b-suc+" aria-label="Agregar una sucursal" ${!pulpos?'disabled':''}>+</button></div>`,
+        off:!pulpos
+      });
+
+      h+='<div class="mod-group-title">Fase 3 · Anuncios<span class="gtag">Gestión mensual, opcional</span></div>';
+      h+=row({
+        name:'Gestión de Meta Ads',
+        price:S.meta!=='ninguno'?fmt(META[S.meta].mes)+' /mes':'',
+        desc:'Nosotros operamos las campañas. La inversión en pauta va directo a Meta.',
+        sub:seg('meta',[{v:'ninguno',l:'Sin gestión'},{v:'crecimiento',l:'Crecimiento'},{v:'autopilot',l:'Autopilot'}],S.meta)
+      });
+      if(S.meta!=='ninguno' && !f2.on){
+        h+='<p class="mod-group-note warn">Te recomendamos tener la agenda lista (Fase 2) antes de lanzar anuncios, para que las citas tengan a dónde llegar.</p>';
+      }
+
+      h+=`<div class="defer-row"><div><div class="tl">Anticipo del ${Math.round(ANTICIPO_PCT*100)}% del setup</div><div class="tt">Se paga al firmar y da inicio al proyecto.</div></div>${LOCK}</div>`;
+      h+=`<div class="defer-row"><div><div class="tl">Resto a ${DEFER_MONTHS} mensualidades</div><div class="tt">El saldo se divide en ${DEFER_MONTHS} pagos iguales.</div></div>${LOCK}</div>`;
+      $('controls').innerHTML=h;
+    }
+
+    // ── Resumen y sección de pago ──
+    function renderSummary(){
+      const c=calc();
+      $('sumSetup').innerHTML=c.sel.length
+        ? c.sel.map(m=>`<div class="sumline"><span>${m.nombre}</span><span>${money(m.precio)}</span></div>`).join('')
+        : '<div class="sumline empty">Sin fases de setup</div>';
+      $('sumSetupNeto').innerHTML=c.pend.length
+        ? (c.neto>0?fmt(c.neto)+'<small> + por definir</small>':'Por definir')
+        : fmt(c.neto);
+      $('sumSetupTotal').textContent=money(c.total);
+      $('sumAnticipoVal').textContent=money(c.anticipo);
+      $('sumDeferLbl').textContent=DEFER_MONTHS+' mensualidades de';
+      $('sumDeferPer').innerHTML=c.mensual==null?'Por definir':fmt(c.mensual)+'<small> /mes</small>';
+
+      $('sumPlat').innerHTML=c.plat.length
+        ? c.plat.map(x=>`<div class="sumline"><span>${x.nombre}</span><span>${fmt(x.monto)}</span></div>`).join('')
+        : '<div class="sumline empty">Sin sucursales adicionales</div>';
+      $('sumPlatTotal').textContent=fmt(c.platTotal);
+
+      $('sumMeta').innerHTML=c.meta
+        ? `<div class="sumline"><span>${c.meta.nombre}</span><span>${fmt(c.meta.mes)} /mes</span></div>`
+        : '<div class="sumline empty">Sin gestión</div>';
+
+      $('stdAnticipoVal').textContent=money(c.anticipo);
+      $('stdMensualidadVal').textContent=money(c.mensual);
+      $('stdTotalVal').textContent=money(c.total);
+    }
+
+    function paint(){
+      const a=document.activeElement;
+      const fk=a&&a.dataset?a.dataset.fk:null;
+      renderControls();
+      renderSummary();
+      if(fk){ const el=$('controls').querySelector('[data-fk="'+fk+'"]'); if(el&&!el.disabled) el.focus(); }
+    }
+
+    $('controls').addEventListener('click',e=>{
+      const b=e.target.closest('[data-act]'); if(!b||b.disabled) return;
+      const act=b.dataset.act, v=b.dataset.v;
+      if(act==='meta') S.meta=v;
+      else if(act==='suc+') S.suc++;
+      else if(act==='suc-') S.suc=Math.max(0,S.suc-1);
+      paint();
+    });
+    $('controls').addEventListener('change',e=>{
+      const i=e.target;
+      if(i.dataset.k==='setup'){ SETUP.find(x=>x.id===i.dataset.id).on=i.checked; }
+      paint();
+    });
+
+    // ── PDF ──
+    const FASES_PDF=[
+      {n:1,title:'Orden',lead:'Pulpos Pro, inventario con código de barras, clientes, facturación, vendedor virtual en WhatsApp y capacitación al equipo.'},
+      {n:2,title:'Agenda',lead:'Landing con dominio propio, agenda en línea, pixel y eventos de Meta.'},
+      {n:3,title:'Atraer',lead:'Campañas de servicios y catálogo, contenido educativo y reporte de costo por cita.'},
+      {n:4,title:'Retener',lead:'Monedero, cumpleaños, recordatorio de revisión anual y recompra por WhatsApp.'},
+      {n:5,title:'Escalar',lead:'Venta nacional en la tienda en línea y sucursales nuevas con el mismo sistema.'},
+    ];
+    const EXCLUSIONES=[
+      'Renovación de la licencia de Pulpos Pro a partir del segundo año: la Fase 1 cubre el primer año ($599 + IVA al mes, en un solo pago anual de $7,188 + IVA).',
+      'Dominio y herramienta de agenda, por definir.',
+      'Comisión de Mercado Pago: 1% por venta en línea.',
+      'Inversión en pauta (Meta Ads).',
+      'La carga de foto de receta en la tienda en línea se valida con Pulpos antes de prometerla.',
+      'Software de historia clínica: se queda como está.',
+    ];
+    const TERMINOS=[
+      'Esta propuesta tiene una vigencia de 15 días naturales a partir de su fecha de emisión.',
+      'El anticipo, equivalente al 40% del total del setup con IVA, se paga al firmar y da inicio formal al proyecto; no es reembolsable una vez que arranca el trabajo.',
+      'El resto del setup se difiere en 3 mensualidades iguales, cobradas por transferencia bancaria.',
+      'Un atraso mayor a 15 días en el pago de una mensualidad puede pausar el trabajo hasta que el pago quede regularizado.',
+      'La propiedad de los entregables (landing, configuración y contenido) se transfiere a Ópticas California al completar el pago total del setup.',
+      'Cualquier módulo o ajuste fuera de lo incluido en esta propuesta se valora y cotiza por separado.',
+      'Para cumplir los tiempos, se requiere que la información, materiales y aprobaciones de cada etapa se compartan a tiempo. Los retrasos pueden mover las fechas.',
+      'El contenido de esta propuesta es confidencial entre Konik y Ópticas California.',
+    ];
+
+    function descargarPropuesta(){
+      if(!window.jspdf||!window.jspdf.jsPDF){ alert('No se pudo cargar el generador de PDF. Revisa tu conexión e intenta de nuevo.'); return; }
+      const { jsPDF }=window.jspdf;
+      const doc=new jsPDF({unit:'pt',format:'letter'});
+      const PAGE_W=doc.internal.pageSize.getWidth(), PAGE_H=doc.internal.pageSize.getHeight();
+      const ink=[12,22,34], inkLight=[72,86,106], brand=[19,146,209], positive=[21,128,61];
+      const left=56, right=PAGE_W-56, top=56, bottom=PAGE_H-54;
+      let y=top;
+      const c=calc();
+
+      function chrome(){
+        doc.setFillColor(...brand); doc.rect(0,0,PAGE_W,6,'F');
+        if(logoDataUrl){
+          const h=30, w=h*LOGO_ASPECT;
+          doc.addImage(logoDataUrl,'PNG', left, 14, w, h);
+        }else{
+          doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(...inkLight);
+          doc.text('KONIK', left, 30);
+        }
+        doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...inkLight);
+        doc.text('Propuesta · Ópticas California', right, 30, {align:'right'});
+        doc.setDrawColor(228); doc.line(left, bottom+18, right, bottom+18);
+        doc.setFontSize(8); doc.setTextColor(150,158,168);
+        doc.text('Propuesta confidencial para Ópticas California', left, bottom+32);
+        doc.text('Página '+doc.internal.getNumberOfPages(), right, bottom+32, {align:'right'});
+      }
+      function newPage(){ doc.addPage(); chrome(); y=top+34; }
+      function ensure(h){ if(y+h>bottom) newPage(); }
+      function sectionTitle(title){
+        ensure(46);
+        doc.setFont('helvetica','bold'); doc.setFontSize(14); doc.setTextColor(...ink);
+        doc.text(title, left, y); y+=10;
+        doc.setDrawColor(...brand); doc.setLineWidth(2); doc.line(left, y+4, left+30, y+4); doc.setLineWidth(1);
+        y+=26;
+      }
+      function checkIcon(cy){
+        const cx=left+7;
+        doc.setFillColor(...positive); doc.circle(cx,cy,6.5,'F');
+        doc.setDrawColor(255,255,255); doc.setLineWidth(1.4);
+        doc.line(cx-3,cy, cx-0.8,cy+2.6); doc.line(cx-0.8,cy+2.6, cx+3.5,cy-3);
+        doc.setLineWidth(1);
+      }
+
+      chrome(); y=top+34;
+
+      // ── Portada ──
+      doc.setFont('helvetica','bold'); doc.setFontSize(24); doc.setTextColor(...ink);
+      doc.text('Propuesta', left, y); y+=26;
+      doc.setFontSize(15); doc.setTextColor(...brand);
+      doc.text('Orden, citas y pacientes para Ópticas California', left, y); y+=22;
+      doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(...inkLight);
+      doc.text('Preparada por Konik · '+new Date().toLocaleDateString('es-MX',{year:'numeric',month:'long',day:'numeric'}), left, y); y+=30;
+
+      doc.setFontSize(10.5); doc.setTextColor(...ink);
+      const intro=doc.splitTextToSize('Esta es la configuración elegida en el cotizador en línea: Pulpos Pro con vendedor virtual para WhatsApp, una página para agendar citas y anuncios en Meta que llenan la agenda.', right-left);
+      doc.text(intro, left, y); y+=intro.length*14+30;
+
+      // ── Datos de proveedor y cliente ──
+      ensure(110);
+      const gap=24, colW=(right-left-gap)/2, c1=left, c2=left+colW+gap;
+      function infoBlock(x,label,d){
+        doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(...brand);
+        doc.text(label, x, y);
+        doc.setDrawColor(...brand); doc.setLineWidth(1.4); doc.line(x, y+4, x+24, y+4); doc.setLineWidth(1);
+        let ly=y+20;
+        doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(...ink);
+        const nameLines=doc.splitTextToSize(d.nombre, colW);
+        doc.text(nameLines, x, ly); ly+=nameLines.length*13+3;
+        doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(...inkLight);
+        doc.text(d.rol, x, ly); ly+=14;
+        doc.text('Tel. '+d.tel, x, ly); ly+=13;
+        const emailLines=doc.splitTextToSize(d.email, colW);
+        doc.text(emailLines, x, ly); ly+=emailLines.length*13;
+        return ly;
+      }
+      const endY1=infoBlock(c1,'PROVEEDOR',{nombre:'Luis Alejandro Hernández Rentería',rol:'CEO · Konik',tel:'33 3487 8186',email:'hola@konik.com.mx'});
+      const endY2=infoBlock(c2,'CLIENTE',{nombre:'Ópticas California',rol:'Consultorio optométrico y óptica · León, Gto.',tel:'N/D',email:'N/D'});
+      y=Math.max(endY1,endY2)+16;
+      doc.setDrawColor(228); doc.line(left,y,right,y); y+=28;
+
+      // ── Lo que incluye ──
+      sectionTitle('Lo que incluye tu propuesta');
+      const incluidos=[];
+      c.sel.forEach(m=>incluidos.push({nombre:m.nombre,desc:m.desc}));
+      if(SETUP[0].on && S.suc>0) incluidos.push({nombre:'Sucursales adicionales ×'+S.suc,desc:'Cada sucursal suma inventario, cortes y reportes propios en el mismo sistema.'});
+      if(c.meta) incluidos.push({nombre:'Fase 3 · Gestión de Meta Ads, plan '+c.meta.nombre,desc:c.meta.resumen});
+      if(!incluidos.length){
+        doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(...inkLight);
+        doc.text('Aún no hay fases seleccionadas.', left, y); y+=20;
+      }
+      incluidos.forEach(m=>{
+        const desc=doc.splitTextToSize(m.desc, right-left-22);
+        ensure(20+desc.length*12+14);
+        checkIcon(y-2);
+        doc.setFont('helvetica','bold'); doc.setFontSize(10.5); doc.setTextColor(...ink);
+        doc.text(m.nombre, left+22, y+2);
+        doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(...inkLight);
+        doc.text(desc, left+22, y+15);
+        y+=20+desc.length*12+8;
+      });
+      y+=14;
+
+      // ── Cómo se ordena ──
+      sectionTitle('Cómo se ordena el proyecto');
+      FASES_PDF.forEach(step=>{
+        const incl=step.n===3?!!c.meta:SETUP.find(m=>m.id==='f'+step.n).on;
+        const lead=doc.splitTextToSize(step.lead, right-left-26);
+        ensure(18+lead.length*12+16);
+        const by=y;
+        doc.setFillColor(...brand); doc.circle(left+9, by+1, 9, 'F');
+        doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(255,255,255);
+        doc.text(String(step.n), left+9, by+4, {align:'center'});
+        doc.setFont('helvetica','bold'); doc.setFontSize(10.5); doc.setTextColor(...ink);
+        doc.text(step.title, left+26, by+1);
+        doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...brand);
+        doc.text(incl?'INCLUIDA':'OPCIONAL', right, by+1, {align:'right'});
+        doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(...inkLight);
+        doc.text(lead, left+26, by+14);
+        y=by+14+lead.length*12+14;
+      });
+
+      // ── Inversión ──
+      newPage();
+      sectionTitle('Inversión');
+      doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(...inkLight);
+      doc.text('Precios de Konik y de Pulpos en MXN. El subtotal va sin IVA.', left, y); y+=20;
+
+      const filas=[];
+      c.sel.forEach(m=>{
+        if(m.precio==null) filas.push([m.nombre+' (pago único)','Por definir','Por definir','Por definir']);
+        else filas.push([m.nombre+' (pago único)',fmt(m.precio),fmt(m.precio*IVA),fmt(m.precio*(1+IVA))]);
+      });
+      if(c.sel.length>1 && c.pend.length===0) filas.push(['Total del setup',fmt(c.neto),fmt(c.neto*IVA),fmt(c.total)]);
+      if(c.plat.length) filas.push(['Sucursales adicionales de Pulpos (al año)',fmt(c.platTotal),fmt(c.platTotal*IVA),fmt(c.platTotal*(1+IVA))]);
+      if(!filas.length) filas.push(['Sin conceptos seleccionados','','','']);
+
+      doc.autoTable({
+        startY:y,
+        margin:{left, right:PAGE_W-right},
+        head:[['Concepto','Subtotal','IVA (16%)','Total']],
+        body:filas,
+        theme:'plain',
+        styles:{font:'helvetica',fontSize:9.5,textColor:ink,cellPadding:{top:9,bottom:9,left:0,right:8}},
+        headStyles:{textColor:brand,fontStyle:'bold',fontSize:9},
+        columnStyles:{1:{halign:'right'},2:{halign:'right'},3:{halign:'right',fontStyle:'bold'}},
+        didDrawCell:(d)=>{
+          doc.setDrawColor(225);
+          doc.line(d.cell.x, d.cell.y+d.cell.height, d.cell.x+d.cell.width, d.cell.y+d.cell.height);
+        },
+      });
+      y=doc.lastAutoTable.finalY+14;
+
+      if(c.meta){
+        doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(...ink);
+        const t=doc.splitTextToSize('Gestión mensual de Meta Ads, plan '+c.meta.nombre+': '+fmt(c.meta.mes)+' MXN al mes. La inversión en pauta va directo a Meta.', right-left);
+        doc.text(t, left, y); y+=t.length*13+6;
+      }
+      y+=14;
+
+      ensure(80);
+      doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(...ink);
+      doc.text('Forma de pago del setup', left, y); y+=16;
+      doc.autoTable({
+        startY:y,
+        margin:{left, right:PAGE_W-right},
+        body:[
+          ['Anticipo al firmar ('+Math.round(ANTICIPO_PCT*100)+'%)', money(c.anticipo)],
+          [DEFER_MONTHS+' mensualidades de', c.mensual==null?'Por definir':fmt(c.mensual)+' / mes'],
+        ],
+        theme:'plain',
+        styles:{font:'helvetica',fontSize:10,textColor:ink,cellPadding:{top:7,bottom:7,left:0,right:8}},
+        columnStyles:{1:{halign:'right',fontStyle:'bold'}},
+      });
+      y=doc.lastAutoTable.finalY+12;
+      doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...inkLight);
+      doc.text('Las mensualidades se cobran por transferencia bancaria.', left, y);
+      y+=30;
+
+      // ── No incluido ──
+      ensure(30);
+      doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(...ink);
+      doc.text('Qué no incluye esta propuesta', left, y); y+=18;
+      doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(...inkLight);
+      EXCLUSIONES.forEach(n=>{
+        const lines=doc.splitTextToSize('- '+n, right-left);
+        ensure(lines.length*13+4);
+        doc.text(lines, left, y); y+=lines.length*13+4;
+      });
+
+      // ── Términos y condiciones ──
+      newPage();
+      sectionTitle('Términos y condiciones');
+      doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(...ink);
+      TERMINOS.forEach((t,i)=>{
+        const lines=doc.splitTextToSize((i+1)+'. '+t, right-left);
+        ensure(lines.length*13+8);
+        doc.text(lines, left, y); y+=lines.length*13+10;
+      });
+
+      doc.save('propuesta-opticas-california.pdf');
+    }
+
+    $('downloadBtn').addEventListener('click', descargarPropuesta);
+
+    const copyClabeBtn=$('copyClabe');
+    copyClabeBtn.addEventListener('click',()=>{
+      navigator.clipboard.writeText($('clabeVal').textContent).then(()=>{
+        const t=copyClabeBtn.textContent; copyClabeBtn.textContent='¡Copiado!'; setTimeout(()=>copyClabeBtn.textContent=t,1500);
+      }).catch(()=>{});
+    });
+
+    paint();
+  })();
+
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+
+  /* ===== CURSOR CON HALO Y RASTRO ===== */
+  if(window.matchMedia('(pointer:fine)').matches){
+    const dot=document.createElement('div'); dot.id='cur-dot';
+    const halo=document.createElement('div'); halo.id='cur-halo';
+    document.body.append(dot,halo);
+    let mx=-200,my=-200,hx=-200,hy=-200,lastT=0;
+    const COLORS=['rgba(19,146,209,.7)','rgba(116,194,236,.7)','rgba(14,118,171,.6)'];
+    document.addEventListener('mousemove',e=>{
+      mx=e.clientX; my=e.clientY;
+      dot.style.cssText+=`left:${mx}px;top:${my}px;`;
+      const now=Date.now();
+      if(now-lastT>28){
+        lastT=now;
+        const p=document.createElement('div');
+        p.className='cur-trail';
+        p.style.cssText=`left:${mx}px;top:${my}px;background:${COLORS[Math.random()*3|0]};`;
+        document.body.appendChild(p);
+        setTimeout(()=>p.remove(),560);
+      }
+    });
+    (function tick(){
+      hx+=(mx-hx)*.11; hy+=(my-hy)*.11;
+      halo.style.cssText=`left:${hx}px;top:${hy}px;`;
+      requestAnimationFrame(tick);
+    })();
+  }</script>
+</body>
+</html>
